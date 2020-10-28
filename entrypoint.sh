@@ -89,6 +89,7 @@ ${output}
 
 		echo "${payload}" | curl -s -S -H "Authorization: token ${GITHUB_TOKEN}" --header "Content-Type: application/json" --data @- "${commentsURL}" > /dev/null
 	fi
+	exit $exitCode
 }
 
 function main(){
