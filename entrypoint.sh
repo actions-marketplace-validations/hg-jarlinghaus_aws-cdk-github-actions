@@ -89,9 +89,7 @@ ${output}
 
 		echo "${payload}" | curl -s -S -H "Authorization: token ${GITHUB_TOKEN}" --header "Content-Type: application/json" --data @- "${commentsURL}" > /dev/null
 	fi
-	if [$exitCode == "1"]
-		exit 1
-	fi
+	exit 1
 }
 
 function main(){
@@ -104,3 +102,4 @@ function main(){
 }
 
 main
+exit 2
